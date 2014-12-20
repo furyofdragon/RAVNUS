@@ -32,7 +32,7 @@
 50    FORMAT(' „‹Ÿ Ž„Ž‹†…ˆŸ €Ž’› €†Œˆ’… <RETURN> '/)
       READ(*,*)
       IR=2
-100   STOP
+      STOP
 60    CALL XYZP(EL,ZY)
       RETURN
  11   IR=2
