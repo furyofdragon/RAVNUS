@@ -1,33 +1,28 @@
-        SUBROUTINE RDZY(EL,FILE,PROEKT,ZY,IR)
-      DIMENSION ZY(999)
+      SUBROUTINE RDZY(EL,FILE,PROEKT,ZY,IR)
+      REAL(4)      ZY(999)
       CHARACTER*64 FILE
-      CHARACTER*4 PROEKT(15)
+      CHARACTER*64 PROEKT
+      REAL(4)      EL
 10    WRITE(*,1)
-1     FORMAT(/1X,'“Š€†ˆ’… ‘…–ˆ”ˆŠ€–ˆž ”€‰‹€ ‘ ˆ”ŽŒ€–ˆ…‰ ',
-     :' Ž ”ŽŒ… ŠŽ“‘€: '/)
-      READ(*,9,ERR=10,END=11) FILE
-9     FORMAT(A)
+1     FORMAT(/1X,'“Š€†ˆ’… ˆŒŸ ”€‰‹€ ‘ ˆ”ŽŒ€–ˆ…‰ Ž ”ŽŒ… ŠŽ“‘€: '/)
+      READ(*,'(A)',ERR=10,END=11) FILE
       OPEN(11,FILE=FILE)
-      WRITE(*,12)
-12    FORMAT(//' ‚›Ž‹Ÿ…’‘Ÿ —’…ˆ… ”€‰‹€.'/)
       KT=1
       IR=0
-      READ(11,13,ERR=4) PROEKT
-13    FORMAT(15A4)
-      READ(11,*,ERR=4)EL
-3     DO 6 K=1,999
-      READ(11,*,ERR=4,END=4)ZY(K)
-      IF(ZY(K).LT.332.)GOTO35
-      IF(ZY(K).GT.998.)GOTO8
-      IF(MOD(KT,2).NE.0)GOTO4
-36    KT=1
-      GOTO 6
-35    KT=KT+1
+      READ(11,'(A)', ERR=4) PROEKT
+      READ(11,    *, ERR=4) EL
+3     DO 6 K = 1, 999
+          READ(11, *, ERR=4, END=4) ZY(K)
+          IF(ZY(K).LT.332.)  GOTO 35
+          IF(ZY(K).GT.998.)  GOTO 8
+          IF(MOD(KT,2).NE.0) GOTO 4
+36        KT=1
+          GOTO 6
+35        KT=KT+1
 6     CONTINUE
 8     CLOSE(11)
       GO TO 60
 4     CONTINUE
-C4      CALL STR
       WRITE(*,40)
 40    FORMAT(' ‚ˆŒ€ˆ…! ‚ ˆ”ŽŒ€–ˆˆ Ž ”ŽŒ… ŠŽ“‘€ Ž€“†…›',
      *' Ž˜ˆŠˆ.'/' …ŠŽŒ…„“…’‘Ÿ ‚›Ž‹ˆ’œ ‡€„€—“ N 2 "…—€’œ ',

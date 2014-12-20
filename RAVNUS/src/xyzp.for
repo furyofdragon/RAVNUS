@@ -1,7 +1,7 @@
       SUBROUTINE XYZP(EL,ZY)
       DIMENSION ZY(999)
-      DL=EL/20.
-      EL2=EL/2.
+      DL  = EL/20.
+      EL2 = EL/2.
       I=1
       J=1
 1     ZY(I)=(EL2-ZY(J))/DL+100.
@@ -16,4 +16,3 @@
 4     ZY(I)=ZY(J)
       RETURN
       END
-

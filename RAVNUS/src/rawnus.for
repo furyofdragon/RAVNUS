@@ -2,7 +2,7 @@
       REAL NSH,KSH(50)
 !     REAL*8 TIMH,TIMK
       COMMON /A5/GS,FS,YS,EL,GI,DT1,FI1,GAM
-      DIMENSION FS(23),YS(23),GS(23),TEXT(20)
+      DIMENSION FS(23),YS(23),GS(23)
       DIMENSION ZY(999),TSS(100),SM(100)
       DIMENSION ST(21,13)
       DIMENSION AF(21,13),BF(21,13),CF(21,13),DF(21,13)
@@ -18,27 +18,15 @@
      *10X,'*    €Ž’€…’ Žƒ€ŒŒ€ “„ˆ””……’Ž‚Šˆ ‘“„€,   *'/
      *10X,'*    €‘—…’€ ………‡›‚€ž™ˆ• ‘ˆ‹ ˆ ˆ‡ƒˆ€ž™ˆ•    *'/
      *10X,'*    ŒŽŒ…’Ž‚ € ’ˆ•Ž‰ ‚Ž„…                     *'/
-     *10X,'*                                               *'/
-     *10X,'*    Žƒ€ŒŒ€ ‚›Ž‹…€ ‚ ˆ†…ƒŽŽ„‘ŠŽŒ        *'/
-     *10X,'*    ˆ‘’ˆ’“’… ˆ†……Ž‚ ‚Ž„ŽƒŽ ’€‘Ž’€     *')
-      WRITE(*,3001)
-3001  FORMAT( 
-     *10X,'*                                               *'/
-     *10X,'*    €‚’Ž› Žƒ€ŒŒ›:                          *'/
-     *10X,'*    ª.â.­.,¤®æ¥­â ‘.. ƒˆˆ   â¥«.36-18-48    *'/
-     *10X,'*    ª.â.­.,¤®æ¥­â ….€. ˆ‚€Ž‚  â¥«.38-97-85    *'/
      *10X,'*************************************************')
       KS=2
       IMB=0
       ISP=0
       ILD=0
       ISM=0
-      WRITE(*,2000)
-2000  FORMAT(1X,'ˆ„…’ˆ”ˆ–ˆ“‰’… Ž"…Š’ €‘—…’€'/
-     *1X,'(€ˆŒ…: ˆ‚€Ž‚ ….€.  Š-53)')
-      READ(*,93)TEXT
-93    FORMAT(20A4)
+
       CALL RDZY(EL,FILE,PROEKT,ZY,IERR)
+
 12002 WRITE(*,2002)
 2002  FORMAT(/1X,
      *'‚‚…„ˆ’… €€Œ…’› ŠŽ“‘€ ˆ ‚Ž„› ‚Ž„Ž…Œ€')
