@@ -4,25 +4,23 @@
       CHARACTER*64 PROEKT
       REAL(4)      EL
 10    WRITE(*,'(A)') '“Š€†ˆ’… ˆŒŸ ”€‰‹€ ‘ ˆ”ŽŒ€–ˆ…‰ Ž ”ŽŒ… ŠŽ“‘€:'
-      READ(*,'(A)',ERR=10,END=11) FILE
+      READ(*,'(A)', ERR=10, END=11) FILE
       OPEN(11,FILE=FILE)
       IR=0
       READ(11,'(A)', ERR=4) PROEKT
       READ(11,    *, ERR=4) EL
       DO K = 1, 999
           READ(11, *, ERR=4, END=4) ZY(K)
-          IF(ZY(K).GT.998.) GOTO 8
+          IF(ZY(K).GT.998.) exit
       END DO
-8     CLOSE(11)
-      GO TO 60
+      CLOSE(11)
+      CALL XYZP(EL,ZY)
+      RETURN
+
 4     CONTINUE
       WRITE(*, '(A)') '‚ ˆ”ŽŒ€–ˆˆ Ž ”ŽŒ… ŠŽ“‘€ Ž€“†…› Ž˜ˆŠˆ.'
       WRITE(*, '(A,/)')' „‹Ÿ Ž„Ž‹†…ˆŸ €Ž’› €†Œˆ’… <RETURN>'
       READ(*,*)
-      IR=2
+11    IR=2
       STOP
-60    CALL XYZP(EL,ZY)
-      RETURN
- 11   IR=2
-      RETURN
       END
