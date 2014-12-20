@@ -27,52 +27,37 @@
 
       CALL RDZY(EL,FILE,PROEKT,ZY,IERR)
 
-12002 WRITE(*,2002)
-2002  FORMAT(/1X,
-     *'‚‚…„ˆ’… €€Œ…’› ŠŽ“‘€ ˆ ‚Ž„› ‚Ž„Ž…Œ€')
-12004 WRITE(*,2004)
-2004  FORMAT(/1X,
-     *'˜ˆˆ€ Ž Š‚‹, Œ...........................',$)
-      READ(*,*,ERR=12004)BK
-12005 WRITE(*,2005)
-2005  FORMAT(/1X,
-     *'‚›‘Ž’€ Ž’€, Œ............................',$)
-      READ(*,*,ERR=12005)H
-12007 WRITE(*,2007)
-2007  FORMAT(/1X,
-     *'Ž‘€„Š€ Ž‘Ž€Ÿ, Œ...........................',$)
-      READ(*,*,ERR=12007)TOC
-22008 WRITE(*,1008)
-1008  FORMAT(/1X,
-     *'ŒŽŒ…’ ˆ…–ˆˆ Ž……—ŽƒŽ ‘…—…ˆŸ ,Œ**4...',$)
-      READ(*,*,ERR=22008)GI
-22007 WRITE(*,3007)
-3007  FORMAT(/1X,
-     *'‹Ž’Ž‘’œ ‚Ž„›, ’/Œ**3 ....................',$)
-      READ(*,*,ERR=22007)GAM
-2016  WRITE(*,1302)
-1302  FORMAT(/1X,'“Š€†ˆ’… ˆŒŸ ”€‰‹€, ‚ ŠŽ’ŽŽŒ “„“’'/
-     *1X,'•€ˆ’œ‘Ÿ …‡“‹œ’€’› €‘—…’€')
-      READ(*,20150) RES
-20150 FORMAT(20A4)
+12002 WRITE(*, '(A)') '‚‚…„ˆ’… €€Œ…’› ŠŽ“‘€ ˆ ‚Ž„› ‚Ž„Ž…Œ€'
+12004 WRITE(*, '(A,$)') '˜ˆˆ€ Ž Š‚‹, Œ...........................'
+      READ (*,*,ERR=12004) BK
+12005 WRITE(*, '(A,$)') '‚›‘Ž’€ Ž’€, Œ............................'
+      READ (*,*,ERR=12005) H
+12007 WRITE(*, '(A,$)') 'Ž‘€„Š€ Ž‘Ž€Ÿ, Œ...........................'
+      READ (*,*,ERR=12007) TOC
+22008 WRITE(*, '(A,$)') 'ŒŽŒ…’ ˆ…–ˆˆ Ž……—ŽƒŽ ‘…—…ˆŸ ,Œ**4...'
+      READ (*,*,ERR=22008) GI
+22007 WRITE(*, '(A,$)') '‹Ž’Ž‘’œ ‚Ž„›, ’/Œ**3 ....................'
+      READ (*,*,ERR=22007) GAM
+2016  WRITE(*,'(A)') 'ˆŒŸ ”€‰‹€ „‹Ÿ …‡“‹œ’€’Ž‚ €‘—…’€'
+      READ (*,'(A)') RES
       OPEN(UNIT=6,FILE=RES,STATUS='NEW')  
-      WRITE(*,2021)
-2021  FORMAT(/1X,'‚‚…„ˆ’… —ˆ‘‹Ž ‚€ˆ€’Ž‚ €ƒ“‡Šˆ NG')
+      WRITE(*,'(A)') '‚‚…„ˆ’… —ˆ‘‹Ž ‚€ˆ€’Ž‚ €ƒ“‡Šˆ NG'
       READ(*,*) NG
       WRITE(*,*) '†„ˆ’… ˆ„…’ €‘—…’'
-      DO 8 I=1,50
-8     B(I)=1.E20
+      DO I=1,50
+         B(I)=1.E20
+      END DO
       J=0
       I=1
 2     P=ZY(I)-100.
-      IF(P.GE.100.)GOTO9
+      IF(P.GE.100.) GOTO 9
       J=J+1
 5     B(J)=AMIN1(B(J),ZY(I+1))
-      IF(ZY(I+3).GE.90.)GOTO4
+      IF(ZY(I+3).GE.90.) GOTO 4
       I=I+2
-      GOTO5
+      GOTO 5
 4     I=I+3
-      IF(ZY(I+1).LT.100.)GOTO2
+      IF(ZY(I+1).LT.100.) GOTO 2
       J=J+1
       B(J)=B(J-1)
       I=I+1
