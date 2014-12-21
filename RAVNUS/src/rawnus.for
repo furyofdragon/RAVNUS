@@ -45,6 +45,7 @@
       WRITE(*,'(A)') '‚‚…„ˆ’… —ˆ‘‹Ž ‚€ˆ€’Ž‚ €ƒ“‡Šˆ NG'
       READ(*,*) NG
       WRITE(*,*) '†„ˆ’… ˆ„…’ €‘—…’'
+
       DO I=1,50
          B(I)=1.E20
       END DO

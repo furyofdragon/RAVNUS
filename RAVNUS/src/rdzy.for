@@ -18,6 +18,7 @@
           IF(ZY(K).GT.998.) exit
       END DO
       CLOSE(11)
+      ! модификация формы х-координат корпуса
       CALL XYZP(EL,ZY)
       RETURN
 
