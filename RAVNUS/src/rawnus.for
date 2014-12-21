@@ -25,6 +25,7 @@
       ILD=0
       ISM=0
 
+      ! ΆΆ®¤ ¨ ¬®¤¨δ¨ª ζ¨ο δ®ΰ¬λ ª®ΰ―γα 
       CALL RDZY(EL,FILE,PROEKT,ZY,IERR)
 
 12002 WRITE(*, '(A)') '‚‚…„’… €€…’› “‘€  ‚„› ‚„…€'
