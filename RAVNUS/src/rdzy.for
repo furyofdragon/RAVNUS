@@ -1,4 +1,4 @@
-      SUBROUTINE RDZY(EL,FILE,PROEKT,ZY,IR)
+      SUBROUTINE RDZY(EL,FILE,PROEKT,nstrok,ZY,IR)
       IMPLICIT NONE
       REAL(4), ALLOCATABLE :: ZY(:)
       CHARACTER(256) FILE
@@ -22,6 +22,7 @@
       CLOSE(11)
       ! модификация формы х-координат корпуса
       CALL XYZP(nstrok, EL,ZY)
+      deallocate(ZY)
       RETURN
 
 4     CONTINUE
