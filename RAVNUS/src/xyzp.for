@@ -1,5 +1,5 @@
-      SUBROUTINE XYZP(EL,ZY)
-      DIMENSION ZY(999)
+      SUBROUTINE XYZP(nstrok, EL, ZY)
+      DIMENSION ZY(nstrok)
       DL  = EL/20.
       EL2 = EL/2.
       I=1
