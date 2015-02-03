@@ -63,8 +63,9 @@
       J=J+1
       B(J)=B(J-1)
       I=I+1
-      GOTO2
+      GOTO 2
 9     CONTINUE
+
       CALL SP(RES,EL,H,H/10.,TOC,ISP,ISM,ZY,KT,TSS,SM)
       CALL BONGAP(RES,H,H/10.,TOC,ZY,ST)
       CALL SPLN(AF,BF,CF,DF,ST)

@@ -1,11 +1,11 @@
       SUBROUTINE RDZY(EL,FILE,PROEKT,ZY,IR)
       IMPLICIT NONE
-      REAL(4)      ZY(999)
-      CHARACTER*64 FILE
-      CHARACTER*64 PROEKT
-      REAL(4)      EL
-      INTEGER(4)   IR
-      INTEGER(4)   K
+      REAL(4)        ZY(999)
+      CHARACTER(256) FILE
+      CHARACTER(256) PROEKT
+      REAL(4)        EL
+      INTEGER(4)     IR
+      INTEGER(4)     K
 10    WRITE(*,'(A)') '“Š€†ˆ’… ˆŒŸ ”€‰‹€ ‘ ˆ”ŽŒ€–ˆ…‰ Ž ”ŽŒ… ŠŽ“‘€:'
       READ(*,'(A)', ERR=10, END=11) FILE
       OPEN(11,FILE=FILE)
