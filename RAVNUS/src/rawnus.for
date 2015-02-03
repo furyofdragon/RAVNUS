@@ -26,7 +26,7 @@
       ISM=0
 
       ! ΆΆ®¤ ¨ ¬®¤¨δ¨ª ζ¨ο δ®ΰ¬λ ª®ΰ―γα 
-      CALL RDZY(EL,FILE,PROEKT,ZY,IERR)
+      CALL RDZY(EL,FILE,PROEKT,nstrok,ZY,IERR)
 
 12002 WRITE(*, '(A)') '‚‚…„’… €€…’› “‘€  ‚„› ‚„…€'
 12004 WRITE(*, '(A,$)') '€  ‚‹, ...........................'
