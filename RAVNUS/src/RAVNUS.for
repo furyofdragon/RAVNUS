@@ -1,7 +1,7 @@
       PROGRAMM RAVNUS
       REAL NSH,KSH(50)
       COMMON /A5/GS,FS,YS,EL,GI,DT1,FI1,GAM
-      DIMENSION FS(23),YS(23),GS(23),TEXT(20)
+      DIMENSION FS(23),YS(23),GS(23)
       DIMENSION ZY(999),TSS(100),SM(100)
       DIMENSION ST(21,13)
       DIMENSION AF(21,13),BF(21,13),CF(21,13),DF(21,13)
@@ -23,11 +23,6 @@
       ISP=0
       ILD=0
       ISM=0
-      WRITE(*,2000)
-2000  FORMAT(1X,'хдемрхтхжхпсире на"ейр пюяверю'/
-     *1X,'(мюопхлеп: хбюмнб е.ю.  й-53)')
-      READ(*,93)TEXT
-93    FORMAT(20A4)
       CALL RDZY(EL,FILE,PROEKT,ZY,IERR)
 12002 WRITE(*,2002)
 2002  FORMAT(/1X,
@@ -122,7 +117,6 @@
       READ(*,*) GS(KK)
       GOTO 2027
 2026  WRITE(*,*) 'фдхре хдер пюявер'
-      WRITE(6,193) TEXT
       WRITE(6,22) EL,BK,H,TOC,GI,GAM
       WRITE(6,212) IS
       DO 2060 I=1,13,6
@@ -145,7 +139,6 @@
       DO 90 I=1,22
 90    GS(I)=GS(I)/9.81
       EG=2.1E8
-C      GAM=1.
       GS(23)=0.
       R5=0.
       R6=0.
@@ -219,7 +212,6 @@ C      GAM=1.
      *18X,'MOMEмр хмепжхх оноепевмнцн яевемхъ ,л**4 ',F7.3/
      *18X,'окнрмнярэ бндш, T/л**3                   ',F6.3)
 25    FORMAT(F10.3)
-193   FORMAT(//18X,20A4)
 212   FORMAT(60X,/29X,'мюцпсгйю мю ьоюжхч',12X,'рюакхжю'/
      *27X,'(бюпхюмр мюцпсгйх N',I2,1H))
 2050  FORMAT(///1X,'N щк-рю ',2X,'ьоюжхъ',2X,'бекхвхмю',
