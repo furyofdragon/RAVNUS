@@ -1,7 +1,10 @@
       SUBROUTINE RDZY(EL, FILE, PROEKT, ZY, IR)
-      DIMENSION ZY(999)
+      IMPLICIT NONE
+      REAL(4)        ZY(999)
       CHARACTER(256) FILE
       CHARACTER(256) PROEKT
+      INTEGER(4)     KT, IR, K
+      REAL(4)        EL
 10    WRITE(*, '(A)') '” ¿∆»“≈ »Ãﬂ ‘¿…À¿ — »Õ‘Œ–Ã¿÷»≈… Œ ‘Œ–Ã≈  Œ–œ”—¿:'
       READ(*, '(A)', ERR = 10) FILE
       OPEN(11, FILE = FILE)
