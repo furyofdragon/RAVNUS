@@ -5,8 +5,7 @@
 10    WRITE(*, 1)
 1     FORMAT(/1X, 'сйюфхре яоежхтхйюжхч тюикю я хмтнплюжхеи ',
      :' н тнпле йнпосяю: ')
-      READ(*, 9, ERR = 10, END = 11) FILE
-9     FORMAT(A)
+      READ(*, '(A)', ERR = 10, END = 11) FILE
       OPEN(11, FILE = FILE)
       WRITE(*, 12)
 12    FORMAT(//' бшонкмъеряъ времхе тюикю.'/)
