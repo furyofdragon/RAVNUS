@@ -43,8 +43,9 @@
       WRITE(*, '(A)') '‚‚…„ˆ’… —ˆ‘‹Ž ‚€ˆ€’Ž‚ €ƒ“‡Šˆ NG'
       READ(*,*) NG
       WRITE(*,*) '†„ˆ’… ˆ„…’ €‘—…’'
-      DO 8 I=1,50
-8     B(I)=1.E20
+      DO I = 1, 50
+          B(I) = 1.E20
+      END DO
       J=0
       I=1
 2     P=ZY(I)-100.
