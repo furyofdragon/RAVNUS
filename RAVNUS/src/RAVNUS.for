@@ -62,18 +62,18 @@
       J=0
       I=1
 2     P=ZY(I)-100.
-      IF(P.GE.100.)GOTO9
+      IF(P.GE.100.)GO TO 9
       J=J+1
 5     B(J)=AMIN1(B(J),ZY(I+1))
-      IF(ZY(I+3).GE.90.)GOTO4
+      IF(ZY(I+3).GE.90.)GO TO 4
       I=I+2
-      GOTO5
+      GO TO 5
 4     I=I+3
-      IF(ZY(I+1).LT.100.)GOTO2
+      IF(ZY(I+1).LT.100.)GO TO 2
       J=J+1
       B(J)=B(J-1)
       I=I+1
-      GOTO2
+      GO TO 2
 9     CONTINUE
       CALL SP(RES,EL,H,H/10.,TOC,ISP,ISM,ZY,KT,TSS,SM)
       CALL BONGAP(RES,H,H/10.,TOC,ZY,ST)
@@ -87,7 +87,7 @@
      *1X,'Õ¿√–”« » œŒ ÿœ¿÷»ﬂÃ ,  Õ')
       DO 2024 I5=1,22
       IH=I5-2
-      GOTO 18
+      GO TO 18
 16    WRITE(*, 14)
 14    FORMAT(' Oÿ»¡ ¿. œŒ¬“Œ–»“≈ ¬¬Œƒ.')
 18    WRITE(*,2025) IH,IH+1
@@ -110,12 +110,12 @@
       SSGS=SSGS/SGS
       WRITE(*,2052)
       READ(*,*) JJ
-      IF(JJ.EQ.0) GOTO 2026
+      IF(JJ.EQ.0) GO TO 2026
       WRITE(*,2053)
       READ(*,*) KK
       WRITE(*,2054)
       READ(*,*) GS(KK)
-      GOTO 2027
+      GO TO 2027
 2026  WRITE(*,*) '∆ƒ»“≈ »ƒ≈“ –¿—◊≈“'
       WRITE(6,22) EL,BK,H,TOC,GI,GAM
       WRITE(6,212) IS
@@ -151,9 +151,9 @@
       XG=EL/40.*R5/R6
       R61=R6/GAM
       TS=TV(R61)
-      IF(TS.LE.H) GOTO 10
+      IF(TS.LE.H) GO TO 10
       WRITE(*,11)
-      GOTO 1111
+      GO TO 1111
 10    TN=TS+(EL/2.-XF(TS))*(XG-XC(TS))/RAD(TS)
       TK=TS-(EL/2.+XF(TS))*(XG-XC(TS))/RAD(TS)
       XWL=XF(TS)
@@ -165,10 +165,10 @@
       I6=I5+1
       TT=TN+(TK-TN)/20.*(I5-1)
       IF(TT.GT.H) STOP 'O—¿ƒ ¿ ¡ŒÀ‹ÿ≈ ¬€—Œ“€ ¡Œ–“¿'
-      IF(TT.LT.0.) GOTO 209
+      IF(TT.LT.0.) GO TO 209
       FS(I6)=F(I5,TT,AF,BF,CF,DF)
       YS(I6)=Y(I5,TT,ZY)
-      GOTO 208
+      GO TO 208
 209   FS(I6)=0.
       YS(I6)=0.
 208   CONTINUE
@@ -180,10 +180,10 @@
       R7=ABS(DT1)+ABS(FI1)
       TN=TN-DT1-FI1
       TK=TK-DT1+FI1
-      IF(R7.LE.0.03*TS) GOTO 210
-      GOTO 211
+      IF(R7.LE.0.03*TS) GO TO 210
+      GO TO 211
 210   CALL RAWYS(RES,TK,TN,IS)
-      IF(IS.LT.NG) GOTO 204
+      IF(IS.LT.NG) GO TO 204
 1111  continue
       CLOSE(6)
       STOP 'KŒÕ≈÷ œ–Œ√–¿ÃÃ€ "RAVNUS"'

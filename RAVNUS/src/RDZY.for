@@ -17,11 +17,11 @@
       READ(11,*,ERR=4)EL
 3     DO 6 K=1,999
       READ(11,*,ERR=4,END=4)ZY(K)
-      IF(ZY(K).LT.332.)GOTO35
-      IF(ZY(K).GT.998.)GOTO8
-      IF(MOD(KT,2).NE.0)GOTO4
+      IF(ZY(K).LT.332.)GO TO 35
+      IF(ZY(K).GT.998.)GO TO 8
+      IF(MOD(KT,2).NE.0)GO TO 4
 36    KT=1
-      GOTO6
+      GO TO 6
 35    KT=KT+1
 6     CONTINUE
 8     CLOSE(11)
