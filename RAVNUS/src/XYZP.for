@@ -1,5 +1,8 @@
       SUBROUTINE XYZP(EL, ZY)
-      DIMENSION ZY(999)
+      IMPLICIT NONE
+      REAL(4)    ZY(999)
+      REAL(4)    DL, EL, EL2
+      INTEGER(4) I, J
       DL  = EL/20.
       EL2 = EL/2.
       I = 1
