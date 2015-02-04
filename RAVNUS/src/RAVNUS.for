@@ -68,8 +68,7 @@
       CALL SP(RES,EL,H,H/10.,TOC,ISP,ISM,ZY,KT,TSS,SM)
       CALL BONGAP(RES,H,H/10.,TOC,ZY,ST)
       CALL SPLN(AF,BF,CF,DF,ST)
-      IS=0
-204   IS=IS+1
+      DO IS = 1, NG
       WRITE(*,2023) IS
 2023  FORMAT(/4X,'‚€ˆ€’ €ƒ“‡Šˆ N ',I2/
      *4X,'---------------------'/
@@ -173,7 +172,7 @@
       IF(R7.LE.0.03*TS) GO TO 210
       GO TO 211
 210   CALL RAWYS(RES,TK,TN,IS)
-      IF(IS.LT.NG) GO TO 204
+      END DO
 1111  continue
       CLOSE(6)
       STOP 'KŽ…– Žƒ€ŒŒ› "RAVNUS"'
