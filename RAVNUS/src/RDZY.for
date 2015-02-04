@@ -11,7 +11,7 @@
       IR = 0
       READ(11, '(A)', ERR = 4) PROEKT
       READ(11, *, ERR = 4) EL
-3     DO 6 K = 1, 999
+      DO 6 K = 1, 999
       READ(11, *, ERR = 4, END = 4) ZY(K)
       IF(ZY(K).LT.332.) GO TO 35
       IF(ZY(K).GT.998.) GO TO 8
