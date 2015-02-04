@@ -1,6 +1,6 @@
       SUBROUTINE SPLINE(X,Y,U,N,A,B,C,D,G,KOD,IR)
 C.....*********************
-C.....*опнцпюллю "RAVNUS" *
+C.....*▐░▌┐░─▄▄─ "RAVNUS" *
 C.....*****06-JAN-92*******
       DIMENSION X(1),Y(1),U(1),A(1),
      *          B(1),C(1),D(1),G(1),A1(13,13)
