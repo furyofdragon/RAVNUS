@@ -1,6 +1,6 @@
        SUBROUTINE SP0P(RES,T,EL,ISP,ZY,KT,TS,SM)
 C.....*********************
-C.....*опнцпюллю "RAVNUS" *
+C.....*▐░▌┐░─▄▄─ "RAVNUS" *
 C.....*****06-JAN-92*******
         COMMON /PL/V(11)/KF/DELTA,ALFA,BETA
         COMMON/TIP/KS/SPL/VT(13),S(13),X1(13),X2(13),
