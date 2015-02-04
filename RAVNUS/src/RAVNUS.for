@@ -23,7 +23,7 @@
       ISP=0
       ILD=0
       ISM=0
-      CALL RDZY(EL,FILE,PROEKT,ZY,IERR)
+      CALL RDZY(EL, FILE, PROEKT, ZY, IERR)
       WRITE(*, '(A)') 'ббедхре оюпюлерпш йнпосяю х бндш бнднелю'
 12004 WRITE(*,2004)
 2004  FORMAT(/1X,'ьхпхмю он йбк, л..........................  .',$)
