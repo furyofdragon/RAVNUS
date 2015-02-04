@@ -35,7 +35,7 @@
       READ(*,*,ERR=22008) GI
 22007 WRITE(*, '(A,$)') '‹Ž’Ž‘’œ ‚Ž„›, ’/Œ**3 . ...................'
       READ(*,*,ERR=22007) GAM
-2016  WRITE(*,1302)
+      WRITE(*,1302)
 1302  FORMAT(/1X,'“Š€†ˆ’… ˆŒŸ ”€‰‹€, ‚ ŠŽ’ŽŽŒ “„“’'/
      *1X,'•€ˆ’œ‘Ÿ …‡“‹œ’€’› €‘—…’€')
       READ(*, '(A)') RES
@@ -162,7 +162,7 @@
       FS(23)=0.
       YS(1)=0.
       YS(23)=0.
-213   CALL UDS
+      CALL UDS
       R7=ABS(DT1)+ABS(FI1)
       TN=TN-DT1-FI1
       TK=TK-DT1+FI1
