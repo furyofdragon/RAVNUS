@@ -5,7 +5,7 @@
 10    WRITE(*, 1)
 1     FORMAT(/1X, 'сйюфхре яоежхтхйюжхч тюикю я хмтнплюжхеи ',
      :' н тнпле йнпосяю: ')
-      READ(*, '(A)', ERR = 10, END = 11) FILE
+      READ(*, '(A)', ERR = 10) FILE
       OPEN(11, FILE = FILE)
       WRITE(*, 12)
 12    FORMAT(//' бшонкмъеряъ времхе тюикю.'/)
@@ -23,7 +23,9 @@
 35    KT = KT + 1
 6     CONTINUE
 8     CLOSE(11)
-      GO TO 60
+      CALL XYZP(EL, ZY)
+      RETURN
+
 4     CONTINUE
       WRITE(*, 40)
 40    FORMAT(' бмхлюмхе! б хмтнплюжхх н тнпле йнпосяю намюпсфемш',
@@ -34,9 +36,5 @@
 50    FORMAT(' дкъ опнднкфемхъ пюанрш мюфлхре <RETURN> ')
       READ(*,*)
       IR = 2
-100   STOP
-60    CALL XYZP(EL, ZY)
-      RETURN
- 11   IR = 2
-      RETURN
+      STOP
       END
