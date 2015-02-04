@@ -18,7 +18,7 @@
       IF(ZY(K).LT.332.) GO TO 35
       IF(ZY(K).GT.998.) GO TO 8
       IF(MOD(KT,2).NE.0) GO TO 4
-36    KT = 1
+      KT = 1
       GO TO 6
 35    KT = KT + 1
 6     CONTINUE
