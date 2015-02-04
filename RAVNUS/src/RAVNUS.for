@@ -6,8 +6,8 @@ C     REAL*8 TIMH,TIMK
       DIMENSION ZY(999),TSS(100),SM(100)
       DIMENSION ST(21,13)
       DIMENSION AF(21,13),BF(21,13),CF(21,13),DF(21,13)
-	CHARACTER*64 FILE
-	CHARACTER*4 PROEKT(15)
+      CHARACTER*64 FILE
+      CHARACTER*4 PROEKT(15)
       CHARACTER*20 DAN,RES
       COMMON/TIP/KS
       COMMON/BAT/B(50)
@@ -38,7 +38,7 @@ C     REAL*8 TIMH,TIMK
      *1X,'(мюопхлеп: хбюмнб е.ю.  й-53)')
       READ(*,93)TEXT
 93    FORMAT(20A4)
-	CALL RDZY(EL,FILE,PROEKT,ZY,IERR)
+      CALL RDZY(EL,FILE,PROEKT,ZY,IERR)
 12002 WRITE(*,2002)
 2002  FORMAT(/1X,
      *'ббедхре оюпюлерпш йнпосяю х бндш бнднелю')
@@ -102,9 +102,9 @@ C     REAL*8 TIMH,TIMK
      *1X,'мюцпсгйх он ьоюжхъл , йм')
       DO 2024 I5=1,22
       IH=I5-2
-	GOTO 18
-16	WRITE(*,14)
-14	FORMAT(' Oьхайю. онбрнпхре ббнд.',\)
+      GOTO 18
+16    WRITE(*, 14)
+14    FORMAT(' Oьхайю. онбрнпхре ббнд.')
 18    WRITE(*,2025) IH,IH+1
 2025  FORMAT(I3,1H-,I2,' ',$)
       READ(*,*,ERR=16)GS(I5)
@@ -173,9 +173,9 @@ C      GAM=1.
       GOTO 1111
 10    TN=TS+(EL/2.-XF(TS))*(XG-XC(TS))/RAD(TS)
       TK=TS-(EL/2.+XF(TS))*(XG-XC(TS))/RAD(TS)
-	XWL=XF(TS)
-	XCV=XC(TS)
-	RM=RAD(TS)
+      XWL=XF(TS)
+      XCV=XC(TS)
+      RM=RAD(TS)
       DO 12 I5=1,23
 12    GS(I5)=GS(I5)/EL*20.
 211   DO 208 I5=1,21
