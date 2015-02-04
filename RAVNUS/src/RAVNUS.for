@@ -46,6 +46,8 @@
       DO I = 1, 50
           B(I) = 1.E20
       END DO
+      !----------------------------------------------------------------
+      ! compare with subroutine XYZP
       J=0
       I=1
 2     P=ZY(I)-100.
@@ -62,6 +64,7 @@
       I=I+1
       GO TO 2
 9     CONTINUE
+      !----------------------------------------------------------------
       CALL SP(RES,EL,H,H/10.,TOC,ISP,ISM,ZY,KT,TSS,SM)
       CALL BONGAP(RES,H,H/10.,TOC,ZY,ST)
       CALL SPLN(AF,BF,CF,DF,ST)
