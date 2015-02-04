@@ -2,9 +2,7 @@
       DIMENSION ZY(999)
       CHARACTER(256) FILE
       CHARACTER(256) PROEKT
-10    WRITE(*, 1)
-1     FORMAT(/1X, '” ¿∆»“≈ —œ≈÷»‘» ¿÷»ﬁ ‘¿…À¿ — »Õ‘Œ–Ã¿÷»≈… ',
-     :' Œ ‘Œ–Ã≈  Œ–œ”—¿: ')
+10    WRITE(*, '(A)') '” ¿∆»“≈ »Ãﬂ ‘¿…À¿ — »Õ‘Œ–Ã¿÷»≈… Œ ‘Œ–Ã≈  Œ–œ”—¿:'
       READ(*, '(A)', ERR = 10) FILE
       OPEN(11, FILE = FILE)
       WRITE(*, 12)
