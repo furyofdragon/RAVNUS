@@ -1,6 +1,6 @@
       SUBROUTINE RAWYS(RES,TK,TN,IS)
 C.....*********************
-C.....*ÏÐÎÃÐÀÌÌÀ "RAVNUS" *
+C.....*Žƒ€ŒŒ€ "RAVNUS" *
 C.....*****06-JAN-92*******
       COMMON /A5/E,F,Y,Z,XG,DT,SS,GAM
      *       /A6/P,V,W,S,Q,DL,N,DK,D
@@ -65,17 +65,17 @@ C      GAM=1.
       BETA=(A11*B2-A21*B1)/RR
       DO 25 I=2,22
    25 W(I)=W(I)+ALFA+BETA*((I-2)/20.-0.5)
-   27 FORMAT(/59X,'ÒÀÁËÈÖÀ'/
-     *6X,'ÐÀÑÏÐÅÄÅËÅÍÈÅ ÎÑÀÄÊÈ È ÂÍÓÒÐÅÍÍÈÕ ',
-     *'ÓÑÈËÈÉ ÏÎ ÄËÈÍÅ ÊÎÐÏÓÑÀ ÑÓÄÍÀ'
-     */25X,'ÂÀÐÈÀÍÒ ÇÀÃÐÓÇÊÈ N',I2)
-  150 FORMAT(4X,65(1H-)/4X,'¦ N  ¦',4X,'ÏEPEPEÇÛÂAÞÙÀß',5X,'¦',5X,
-     *'ÈÇÃÈÁAÞÙÈÉ',8X,'¦',10X,'¦'/4X,'¦ØÏ. ¦',4X,
-     *'CÈËA, KH',11X,'¦',5X,'MOMEHT, KHM',7X,
-     *'¦  ÎÑÀÄÊÀ, ¦'/4X,'¦',4X,'¦',2(23(1H-),'¦'),4X,'M',5X,
-     *'¦'/4X,'¦',4X,'¦',2(' ÁEÇ Ó×ETA ¦ C Ó×ETOM  ¦'),10X,
-     *'¦'/4X,'¦',4X,'¦',2(' ÃÈÁKOCTÈ  ¦ ÃÈÁKOCTÈ  ¦'),
-     *10X,'¦'/4X,'¦',63(1H-),'¦')
+   27 FORMAT(/59X,'’€‹ˆ–€'/
+     *6X,'€‘…„…‹…ˆ… Ž‘€„Šˆ ˆ ‚“’…ˆ• ',
+     *'“‘ˆ‹ˆ‰ Ž „‹ˆ… ŠŽ“‘€ ‘“„€'
+     */25X,'‚€ˆ€’ ‡€ƒ“‡Šˆ N',I2)
+  150 FORMAT(4X,65(1H-)/4X,'³ N  ³',4X,'EPEPE‡›‚Až™€Ÿ',5X,'³',5X,
+     *'ˆ‡ƒˆAž™ˆ‰',8X,'³',10X,'³'/4X,'³˜. ³',4X,
+     *'Cˆ‹A, KH',11X,'³',5X,'MOMEHT, KHM',7X,
+     *'³  Ž‘€„Š€, ³'/4X,'³',4X,'³',2(23(1H-),'³'),4X,'M',5X,
+     *'³'/4X,'³',4X,'³',2(' E‡ “—ETA ³ C “—ETOM  ³'),10X,
+     *'³'/4X,'³',4X,'³',2(' ƒˆKOCTˆ  ³ ƒˆKOCTˆ  ³'),
+     *10X,'³'/4X,'³',63(1H-),'³')
       DO 151 I=2,22
   151 P(I)=Y(I)*W(I)
       CALL INTN(P,E)
@@ -104,8 +104,8 @@ C      GAM=1.
       DO 341 I=2,22
       I2=I-2
 341   WRITE(6,82) I2,V1(I),V(I),S1(I),S(I),W(I)
-   82 FORMAT(4X,'¦ ',I2,1X,'¦', 4(1X,F9.0,1X,'¦'),
-     *1X,F8.3,1X,'¦')
+   82 FORMAT(4X,'³ ',I2,1X,'³', 4(1X,F9.0,1X,'³'),
+     *1X,F8.3,1X,'³')
       WRITE(6,83)
    83 FORMAT(4X,65(1H-)//)
       XG=XG/G
