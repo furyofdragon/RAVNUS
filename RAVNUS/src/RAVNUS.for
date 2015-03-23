@@ -42,7 +42,7 @@
 1302  FORMAT(/1X,'“Š€†ˆ’… ˆŒŸ ”€‰‹€, ‚ ŠŽ’ŽŽŒ “„“’'/
      *1X,'•€ˆ’œ‘Ÿ …‡“‹œ’€’› €‘—…’€')
       READ(*, '(A)') RES
-      OPEN(UNIT=6,FILE=RES,STATUS='NEW')  
+      OPEN(UNIT=6, FILE=RES, STATUS='NEW')
       WRITE(*, '(A)') '‚‚…„ˆ’… —ˆ‘‹Ž ‚€ˆ€’Ž‚ €ƒ“‡Šˆ NG'
       READ(*,*) NG
       WRITE(*,*) '†„ˆ’… ˆ„…’ €‘—…’'
