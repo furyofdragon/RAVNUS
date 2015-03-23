@@ -5,9 +5,9 @@
       DIMENSION ZY(999),TSS(100),SM(100)
       DIMENSION ST(21,13)
       DIMENSION AF(21,13),BF(21,13),CF(21,13),DF(21,13)
-      CHARACTER(256) FILE
+      CHARACTER(256) FILE       ! файл корпуса
       CHARACTER(256) PROEKT
-      CHARACTER(256) RES
+      CHARACTER(256) RES        ! файл результатов
       COMMON/TIP/KS
       COMMON/BAT/B(50)
 
